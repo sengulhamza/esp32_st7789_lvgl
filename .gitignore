@@ -18,6 +18,8 @@ CTestTestfile.cmake
 cmake-build-debug/*
 .vscode/*
 build/*
+managed_components
+dependencies.lock
 doc/*
 workspace.code-workspace
 sdkconfig
