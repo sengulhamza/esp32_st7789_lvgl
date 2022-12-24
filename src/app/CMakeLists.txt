@@ -1,5 +1,6 @@
 set(sources
     src/app_mngr.c
+    src/display_panel_mngr.c
 )
 
 idf_component_register(
@@ -7,9 +8,7 @@ idf_component_register(
     INCLUDE_DIRS . inc inc/app
     REQUIRES freertos
             esp_system
-            esp_wifi
-            esp_eth
-            esp_phy
+            esp_lcd
             lwip
             efuse
             esp_netif

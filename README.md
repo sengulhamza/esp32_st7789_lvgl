@@ -1,3 +1,18 @@
+# IDF Version: Release 5.0
+
+```
+cd esp/esp-idf
+git checkout release/v5.0
+git submodule update --init --recursive
+git branch
+```
+git branch output
+```
+  master
+* release/v5.0
+(END)
+```
+
 
 # How to build
 
@@ -21,6 +36,7 @@ idf.py flash monitor  -p <port> # load and open terminal
 - `src` is the main application source directory.
 - `src/app` for application related code files. ie: main, led, web server
 - `src/core` system files related to ESP32
+- `src/ui` LVGL UI files. It may be SquareLine Studio's exported files.
 
 `tree src/`
 
@@ -30,6 +46,7 @@ src
 ├── app
 ├── common
 └── core
+└── ui
 ```
 ---
 ## Branch workflow
