@@ -11,6 +11,7 @@
 #include "core_includes.h"
 #include "app/app_config.h"
 #include "app/app_types.h"
+#include "ui/ui.h"
 
 static const char *TAG = "appmngr";
 

@@ -17,6 +17,7 @@ idf_component_register(
             nvs_flash
             app_update
             core
+            ui
             json
 )
 
