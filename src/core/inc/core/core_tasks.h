@@ -14,8 +14,8 @@
 #define CORE_TASK_SIZE(a)            (sizeof(CORE_TASK_STACK_TYPE)*(a))
 
 
-#define CORE_LVGL_ROUTUNE_TASK_PRIO         (CORE_TASK_PRIO_MIN + 6)
-#define CORE_LVGL_ROUTUNE_TASK_STACK        (4*KBYTE + CORE_TASK_MIN_STACK)
+#define CORE_LVGL_ROUTUNE_TASK_PRIO         (CORE_TASK_PRIO_MIN + 4)
+#define CORE_LVGL_ROUTUNE_TASK_STACK        (2*KBYTE + CORE_TASK_MIN_STACK)
 #define CORE_LVGL_ROUTUNE_TASK_NAME         "lvgl_routune_timer"
 
 #endif

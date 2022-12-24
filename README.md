@@ -1,3 +1,17 @@
+# IDF V: Release 5.0
+```
+cd esp/esp-idf
+git checkout release/v5.0
+git submodule update --init --recursive
+git branch
+```
+git branch output
+```
+  master
+* release/v5.0
+(END)
+```
+
 
 # How to build
 

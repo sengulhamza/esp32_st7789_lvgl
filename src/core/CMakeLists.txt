@@ -1,15 +1,13 @@
 set(sources
-
+    src/st7789_panel_driver.c
 )
 
 idf_component_register(
     SRCS ${sources}
     INCLUDE_DIRS . inc inc/core
     REQUIRES freertos
-            spiffs
-            common
-            mbedtls
-            esp_wifi
+            esp_timer
+            esp_lcd
             driver
 )
 
