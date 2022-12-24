@@ -1,3 +1,8 @@
+# DEMO
+
+![](https://github.com/sengulhamza/esp32_st7789_lvgl/blob/master/readme_assets/demo.gif)
+
+
 # IDF Version: Release 5.0
 
 ```
