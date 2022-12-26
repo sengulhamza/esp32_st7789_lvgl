@@ -1,6 +1,8 @@
 set(sources
     src/ui.c
     src/ui_helpers.c
+    src/ui_font_Number.c
+    src/ui_events.c
 )
 
 idf_component_register(

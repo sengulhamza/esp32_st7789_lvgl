@@ -96,7 +96,7 @@ static void display_panel_demo_task(void *param)
     vTaskDelay(pdMS_TO_TICKS(1000)); //wait for panel reset routine and power sequence
     ESP_LOGI(TAG, "%s task started.", __func__);
     uint8_t minutes  = 0, seconds = 0, connection_label = 0;
-    char time_string[20] = {0};
+    char time_string[100] = {0};
     while (1) {
         //this task and generated text is only for demo
         if (++seconds >= 60) { //max second is 59
@@ -105,17 +105,15 @@ static void display_panel_demo_task(void *param)
             }
             seconds = 0;
         }
-        sprintf(time_string, "%02d:%02d", minutes, seconds);
-        lv_label_set_text(ui_Label3, time_string);
-
-        connection_label = !(bool)connection_label;
-        if (connection_label) { //connection status
-            lv_obj_set_style_bg_color(ui_Panel1, lv_color_hex(0x00FF00), LV_PART_MAIN | LV_STATE_DEFAULT);
-        } else {
-            lv_obj_set_style_bg_color(ui_Panel1, lv_color_hex(0x00abcd), LV_PART_MAIN | LV_STATE_DEFAULT);
-        }
+        sprintf(time_string, "%02d°", seconds);
+        lv_label_set_text(ui_Label_Celsius, time_string);
         uint8_t slider_val = rand() % 101;
-        _ui_slider_set_property(ui_Slider1, _UI_SLIDER_PROPERTY_VALUE_WITH_ANIM, slider_val); // slider demo. range is [0 - 100]
+        //_ui_arc_increment(ui_Arc1, seconds);
+        lv_arc_set_value(ui_Arc1, seconds);
+        sprintf(time_string, "free/min heap:%" PRIu32 "/%" PRIu32 "", esp_get_free_heap_size(), esp_get_minimum_free_heap_size());
+        lv_label_set_text(ui_Label_Slider, time_string);
+        //_ui_slider_set_property(ui_Slider1, _UI_SLIDER_PROPERTY_VALUE_WITH_ANIM, slider_val); // slider demo. range is [0 - 100]
+        lv_slider_set_value(ui_Fan_Speed_Control, slider_val, LV_ANIM_ON);
         ESP_LOGI(TAG, "label3: %s \t slider_val:%d \t connection_label:%d", time_string, slider_val, connection_label);
         vTaskDelay(pdMS_TO_TICKS(1000)); //one second (1000ms)
     }

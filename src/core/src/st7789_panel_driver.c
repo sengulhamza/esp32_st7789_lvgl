@@ -59,7 +59,7 @@ esp_lcd_panel_handle_t *st7789_panel_driver_init(void *lvgl_fluxh_ntfy_fnc, void
     esp_lcd_panel_io_spi_config_t io_config = {
         .dc_gpio_num = ST7789_PIN_NUM_LCD_DC,
         .cs_gpio_num = ST7789_PIN_NUM_LCD_CS,
-        .pclk_hz = SPI_MASTER_FREQ_40M,
+        .pclk_hz = SPI_MASTER_FREQ_20M,
         .lcd_cmd_bits = ST7789_LCD_CMD_BITS,
         .lcd_param_bits = ST7789_LCD_PARAM_BITS,
         .spi_mode = 2,

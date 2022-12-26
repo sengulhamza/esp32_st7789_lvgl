@@ -1,6 +1,12 @@
 # DEMO
 
+- commit 00ab599 demo:
+
 ![](https://github.com/sengulhamza/esp32_st7789_lvgl/blob/master/readme_assets/demo.gif)
+
+- latest (master) demo:
+
+![](https://github.com/sengulhamza/esp32_st7789_lvgl/blob/master/readme_assets/demo2.gif)
 
 
 # IDF Version: Release 5.0
